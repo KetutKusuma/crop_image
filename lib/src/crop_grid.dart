@@ -60,7 +60,7 @@ class _CropGridPainter extends CustomPainter {
 
     if (grid.addCircleGrid) {
       // ==== SCRIM (gelap di luar lingkaran) ====
-      final Rect circleRect = Rect.fromCenter(center: bounds.center, width: bounds.shortestSide, height: bounds.shortestSide);
+      final Rect circleRect = Rect.fromCenter(center: bounds.center, width: imageSize.shortestSide, height: imageSize.shortestSide);
 
       final Path outer = Path()..addRect(Rect.fromLTWH(0, 0, size.width, size.height));
       final Path circle = Path()..addOval(circleRect);
