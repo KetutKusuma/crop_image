@@ -39,7 +39,7 @@ class _MyHomePageState extends State<MyHomePage> {
         body: Center(
           child: CropImage(
             controller: controller,
-            image: Image.asset('assets/08272011229.jpg'),
+            image: Image.asset('assets/kurir.png'),
             paddingSize: 25.0,
             alwaysMove: true,
             minimumImageSize: 500,
