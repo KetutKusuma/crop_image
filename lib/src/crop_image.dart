@@ -116,6 +116,9 @@ class CropImage extends StatefulWidget {
   /// Default is const CircularProgressIndicator.adaptive()
   final Widget loadingPlaceholder;
 
+  /// add circle grid
+  final bool addCircleGrid;
+
   const CropImage({
     super.key,
     this.controller,
@@ -137,6 +140,7 @@ class CropImage extends StatefulWidget {
     this.alwaysMove = false,
     this.overlayPainter,
     this.loadingPlaceholder = const CircularProgressIndicator.adaptive(),
+    this.addCircleGrid = true,
   })  : gridInnerColor = gridInnerColor ?? gridColor,
         gridCornerColor = gridCornerColor ?? gridColor,
         assert(gridCornerSize > 0, 'gridCornerSize cannot be zero'),
@@ -309,6 +313,7 @@ class _CropImageState extends State<CropImage> {
                       onSize: (size) {
                         this.size = size;
                       },
+                      addCircleGrid: widget.addCircleGrid,
                     ),
                   ),
                 ),
